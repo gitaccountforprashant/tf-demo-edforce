@@ -14,7 +14,15 @@ jobs:
         - name: checkout
           uses: actions/checkout@v4
 
-        - name: run l
+        - uses: actions/setup-python@v5
+          with:
+            python-version: '3.10'
+
+        - name: run pip
+          run: python -m pip install --upgrade pip
+          shell: bash
+
+        - name: run
           run: pip install --no-cache-dir -r requirements.txt
 
         - name: run unit
@@ -22,6 +30,4 @@ jobs:
             GH_TOKEN: ${{secrets.GH_TOKEN}}
             TEST: XYZ
           run: |
-           python3 test_app.py
-           echo $TEST
-           echo ${{env.JAVA_VERSION}}
+           python test_app.py

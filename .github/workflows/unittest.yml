@@ -1,0 +1,20 @@
+name: run unit test
+
+on:
+  pull_request:
+    branch:
+       - main
+
+job:
+  unittest:
+    runs_on: ubuntu_latest
+      steps:
+        - name: checkout
+          uses: actions/checkout@v4
+
+        - name: run l
+          run: |
+            - pip install --no-cache-dir -r requirements.txt
+
+        - name: run unit
+          run: python3 test_app.py

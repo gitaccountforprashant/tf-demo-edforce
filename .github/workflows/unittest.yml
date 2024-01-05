@@ -1,7 +1,7 @@
 name: run unit test
 
 on:
-  pull_request:
+  push:
     branch:
        - main
 

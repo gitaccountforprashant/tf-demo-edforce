@@ -13,8 +13,7 @@ jobs:
           uses: actions/checkout@v4
 
         - name: run l
-          run: |
-            - pip install --no-cache-dir -r requirements.txt
+          run: pip install --no-cache-dir -r requirements.txt
 
         - name: run unit
           run: python3 test_app.py

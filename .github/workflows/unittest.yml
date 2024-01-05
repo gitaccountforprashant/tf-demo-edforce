@@ -1,13 +1,13 @@
-name: run unit test
+name: unit test
 
 on:
   push:
     branches:
-       - main
+      - main
 
 jobs:
-  unittest:
-    runs_on: ubuntu-latest
+    unit:
+      runs_on: ubuntu-latest
     steps:
         - name: checkout
           uses: actions/checkout@v4

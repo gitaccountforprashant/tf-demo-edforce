@@ -7,7 +7,7 @@ on:
 
 jobs:
   unittest:
-    runs_on: ubuntu_latest
+    runs_on: ubuntu-latest
     steps:
         - name: checkout
           uses: actions/checkout@v4

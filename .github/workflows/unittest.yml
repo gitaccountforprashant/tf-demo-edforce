@@ -5,7 +5,7 @@ on:
     branch:
        - main
 
-job:
+jobs:
   unittest:
     runs_on: ubuntu_latest
     steps:

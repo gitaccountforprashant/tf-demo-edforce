@@ -24,4 +24,4 @@ jobs:
           run: |
            python3 test_app.py
            echo $TEST
-           echo $JAVA_VERSION
+           echo ${{env.JAVA_VERSION}}

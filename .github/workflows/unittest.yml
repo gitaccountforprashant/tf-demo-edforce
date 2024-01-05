@@ -7,6 +7,8 @@ on:
 
 jobs:
     unit:
+      env:
+        JAVA_VERSION: '11'
       runs-on: ubuntu-latest
       steps:
         - name: checkout
@@ -18,4 +20,8 @@ jobs:
         - name: run unit
           env:
             GH_TOKEN: ${{secrets.GH_TOKEN}}
-          run: python3 test_app.py
+            TEST: XYZ
+          run:
+           - python3 test_app.py
+           - echo $TEST
+           - echo $JAVA_VERSION

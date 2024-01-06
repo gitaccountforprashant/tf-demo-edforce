@@ -10,7 +10,7 @@ class TestApp(unittest.TestCase):
     def test_add_numbers(self):
         response = self.app.get("/users/octocat/")
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(len(response.json), 7)  # octocat user have total 8 gists
+        self.assertEqual(len(response.json), 8)  # octocat user have total 8 gists
         self.assertEqual(
             response.json,
             [

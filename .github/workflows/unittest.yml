@@ -38,4 +38,5 @@ jobs:
             TEST: XYZ
           run: |
            coverage run test_app.py
+           coverage report -m
            coverage html

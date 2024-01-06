@@ -22,7 +22,7 @@ jobs:
           run: python -m pip install --upgrade pip
           shell: bash
 
-        - name: run
+        - name: intall
           run: pip install --no-cache-dir -r requirements.txt
 
         - name: run unit
@@ -31,3 +31,7 @@ jobs:
             TEST: XYZ
           run: |
            python test_app.py
+
+        - name: lint
+          run: ruff check .
+          continue-on-error: true

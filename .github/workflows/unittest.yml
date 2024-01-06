@@ -25,13 +25,13 @@ jobs:
         - name: intall
           run: pip install --no-cache-dir -r requirements.txt
 
+        - name: lint
+          run: ruff check .
+          continue-on-error: true
+
         - name: run unit
           env:
             GH_TOKEN: ${{secrets.GH_TOKEN}}
             TEST: XYZ
           run: |
            python test_app.py
-
-        - name: lint
-          run: ruff check .
-          continue-on-error: true

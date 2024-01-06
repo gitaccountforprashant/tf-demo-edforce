@@ -23,15 +23,19 @@ jobs:
           shell: bash
 
         - name: intall
-          run: pip install --no-cache-dir -r requirements.txt
+          run: pip install coverage ruff
 
         - name: lint
           run: ruff check .
           continue-on-error: true
+
+
+
 
         - name: run unit
           env:
             GH_TOKEN: ${{secrets.GH_TOKEN}}
             TEST: XYZ
           run: |
-           python test_app.py
+           coverage run test_app.py
+           coverage html

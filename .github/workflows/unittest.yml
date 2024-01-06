@@ -43,6 +43,13 @@ jobs:
           name: my-artifact
           path: htmlcov/index.html
 
+  job_series:
+    runs-on: ubuntu-latest
+    needs: [unit]
+    steps:
+      - name: "series"
+        run: ls
+
   job_pl:
     runs-on: ubuntu-latest
     steps:

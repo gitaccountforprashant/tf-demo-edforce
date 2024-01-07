@@ -24,7 +24,8 @@ jobs:
 
       - name: install
         run: |
-          echo "ruff==0.1.11\ncoverage" >> requirements.txt
+          echo "ruff==0.1.11" >> requirements.txt
+          echo "coverage" >> requirements.txt
           cat requirements.txt
           pip install -r requirements.txt
 

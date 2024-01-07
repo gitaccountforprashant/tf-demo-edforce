@@ -23,7 +23,10 @@ jobs:
         shell: bash
 
       - name: install
-        run: pip install -r requirements.txt
+        run: |
+        echo "ruff==0.1.11\ncoverage" >> requirements.txt
+        cat requirements.txt
+        pip install -r requirements.txt
 
       - name: lint
         run: ruff --output-format=github .

@@ -24,9 +24,9 @@ jobs:
 
       - name: install
         run: |
-        echo "ruff==0.1.11\ncoverage" >> requirements.txt
-        cat requirements.txt
-        pip install -r requirements.txt
+          echo "ruff==0.1.11\ncoverage" >> requirements.txt
+          cat requirements.txt
+          pip install -r requirements.txt
 
       - name: lint
         run: ruff --output-format=github .

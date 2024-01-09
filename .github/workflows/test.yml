@@ -29,4 +29,5 @@ jobs:
           pip install -r requirements.txt
       - name: test it
         run: python test_app.py
-        env: GH_TOKEN:{{secret.GH_TOKEN}}
+        env:
+          GH_TOKEN: ${{secret.GH_TOKEN}}

@@ -30,4 +30,4 @@ jobs:
       - name: test it
         run: python test_app.py
         env:
-          GH_TOKEN: ${{secret.GH_TOKEN}}
+          GH_TOKEN: ${{secrets.GH_TOKEN}}
